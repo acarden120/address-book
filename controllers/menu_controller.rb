@@ -1,4 +1,4 @@
- require_relative "../models/address_book"
+require_relative "../models/address_book"
  
 class MenuController
   attr_accessor :address_book
@@ -90,6 +90,7 @@ class MenuController
   end
  
   def read_csv
+
   end
 
   def entry_submenu(entry)
