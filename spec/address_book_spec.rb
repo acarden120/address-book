@@ -32,12 +32,10 @@ RSpec.describe AddressBook do
       book = AddressBook.new
       book.add_entry('Test Name', '011.013.1816', 'test.example@gmail.com')
       original_size = book.entries.size
-
       old_entry = book.entries.last
-      book.remove_entry(old_entry)
-      
-      expect(book.entries.size).to eq original_size - 1
 
+      book.remove_entry(old_entry.name, old_entry.phone_number, old_entry.email)
+      expect(book.entries.size).to eq original_size - 1
     end
   end
 
